@@ -38,7 +38,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         buttonObjectCopy.setOnClickListener {
 
             val noteTwo = noteOne.copy(name = "Change note", age = 23)
-
             val sumText: String = noteTwo.name + " " + noteTwo.age.toString()
             textInfo.text = sumText
 
