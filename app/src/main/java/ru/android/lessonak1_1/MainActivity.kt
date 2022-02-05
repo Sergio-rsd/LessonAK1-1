@@ -47,13 +47,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(p0: View?) {
-        var notes = Repo.getNoteList()
+        val notes = Repo.getNoteList()
 
         Repo.noteList.add(Note(name = "First note", 2))
         Repo.noteList.add(Note(name = "Second note", 16))
         Repo.noteList.add(Note(name = "Last note", 33))
 
-        val simpleNote = 16
+        val simpleNoteAge = 16
 
         for (singleNote in notes) {
             println(singleNote.name + " : " + singleNote.age)
@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             println()
         }
         for (i in 0 until notes.size) {
-            if (notes[i].age == simpleNote) {
+            if (notes[i].age == simpleNoteAge) {
                 notes[i].name = "Hello Kotlin!"
                 println(notes[i])
                 return
