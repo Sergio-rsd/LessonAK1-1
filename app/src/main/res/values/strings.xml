@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LessonAK1-1</string>
+    <string name="hello_world">Hello World</string>
+    <string name="create_note_name">Create note name</string>
+    <string name="create_note_age">Create note age</string>
+    <string name="create_copy">Create copy</string>
+    <string name="loops_to_the_console">Loops to the console</string>
+</resources>
