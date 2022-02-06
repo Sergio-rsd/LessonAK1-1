@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             print("Hello Kotlin! And World!")
             println()
         }
-        for (i in 0 until notes.size) {
+        for (i in notes.indices) {
             if (notes[i].age == simpleNoteAge) {
                 notes[i].name = "Hello Kotlin!"
                 println(notes[i])
