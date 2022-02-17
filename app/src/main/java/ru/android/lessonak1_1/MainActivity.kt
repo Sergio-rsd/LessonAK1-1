@@ -38,7 +38,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         buttonObjectCopy.setOnClickListener {
 
             val noteTwo = noteOne.copy(name = "Change note", age = 23)
-
             val sumText: String = noteTwo.name + " " + noteTwo.age.toString()
             textInfo.text = sumText
 
@@ -47,13 +46,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(p0: View?) {
-        var notes = Repo.getNoteList()
+        val notes = Repo.getNoteList()
 
         Repo.noteList.add(Note(name = "First note", 2))
         Repo.noteList.add(Note(name = "Second note", 16))
         Repo.noteList.add(Note(name = "Last note", 33))
 
-        val simpleNote = 16
+        val simpleNoteAge = 16
 
         for (singleNote in notes) {
             println(singleNote.name + " : " + singleNote.age)
@@ -68,8 +67,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             print("Hello Kotlin! And World!")
             println()
         }
-        for (i in 0 until notes.size) {
-            if (notes[i].age == simpleNote) {
+        for (i in notes.indices) {
+            if (notes[i].age == simpleNoteAge) {
                 notes[i].name = "Hello Kotlin!"
                 println(notes[i])
                 return
